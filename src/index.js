@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { render } from "preact";
+import "./index.css";
+import NavBar from "./components/NavBar.jsx";
+import Footer from "./components/Footer.jsx";
+import * as ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login_Register_Form from "./components/LoginForm.jsx";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className=" h-full vw-100">
+      <App />
+      <Footer></Footer>
+    </div>{" "}
   </React.StrictMode>
 );
 

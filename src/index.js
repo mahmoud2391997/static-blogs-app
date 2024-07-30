@@ -16,7 +16,7 @@ root.render(
     <div className=" h-full vw-100">
       <App />
       <Footer></Footer>
-    </div>{" "}
+    </div>
   </React.StrictMode>
 );
 

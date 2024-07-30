@@ -149,7 +149,7 @@ function BlogComponent({ user }) {
   useEffect(() => {
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=${currentCategory}&apiKey=d84d60794beb40f0b45129ff86ae475b`
+        `http://newsapi.org/v2/everything?q=${currentCategory}&apiKey=d84d60794beb40f0b45129ff86ae475b`
       )
       .then(({ data }) => {
         let blogs;

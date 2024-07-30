@@ -63,7 +63,7 @@ export default function Login_Register_Form({ type, authorization }) {
         })
         .catch((errors) => {
           console.log(errors);
-          errors ? setError(errors.errors[0]) : null;
+          if (errors) setError(errors.errors[0]);
           // Validation errors
         });
     }

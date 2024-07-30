@@ -69,7 +69,7 @@ function BlogComponent({ user }) {
         // Handle success
 
         console.log(response.data); // The response data from the server
-        location.reload();
+        window.location.href = window.location.href;
       })
       .catch((error) => {
         // Handle error
@@ -201,7 +201,7 @@ function BlogComponent({ user }) {
       .then((response) => {
         // Handle success
         console.log(response.data); // The response data from the server
-        location.reload();
+        window.location.href = window.location.href;
       })
       .catch((error) => {
         // Handle error
@@ -223,9 +223,8 @@ function BlogComponent({ user }) {
         // Handle success]
         setAddedBlogs(response.data.blogs);
         let blogs = authedData;
-        response.data.blogs
-          ? (blogs = [...authedData, ...response.data.blogs])
-          : null;
+        if (response.data.blogs)
+          blogs = [...authedData, ...response.data.blogs];
 
         setAuthedData(blogs);
         setData(blogs);
@@ -250,9 +249,8 @@ function BlogComponent({ user }) {
         // Handle success]
         setAddedBlogs(response.data.blogs);
         let blogs = authedData;
-        response.data.blogs
-          ? (blogs = [...authedData, ...response.data.blogs])
-          : null;
+        if (response.data.blogs)
+          blogs = [...authedData, ...response.data.blogs];
 
         setAuthedData(blogs);
         setData(blogs);
